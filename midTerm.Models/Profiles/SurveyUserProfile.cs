@@ -13,8 +13,11 @@ namespace midTerm.Models.Profiles
             CreateMap<SurveyUser, SurveyUserExtended>()
                 .ReverseMap();
 
-            CreateMap<SurveyUserCreate, SurveyUser>();
-            CreateMap<SurveyUserUpdate, SurveyUser>();
+            CreateMap<SurveyUserCreate, SurveyUser>()
+                 .ForMember(dest => dest.Id, opt => opt.Ignore())
+                 .ForMember(dest => dest.Answers, opt => opt.Ignore());
+            CreateMap<SurveyUserUpdate, SurveyUser>()
+                 .ForMember(dest => dest.Answers, opt => opt.Ignore());
         }
 
     }

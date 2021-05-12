@@ -16,7 +16,9 @@ namespace midTerm.Models.Profiles
 
             CreateMap<QuestionCreateModel, Question>()
                 .ForMember(dest => dest.Text, opt => opt.MapFrom(src => src.Text))
-                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description));
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                 .ForMember(dest => dest.Id, opt => opt.Ignore())
+                 .ForMember(dest => dest.Options, opt => opt.Ignore());
             
             CreateMap<QuestionUpdateModel, Question>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))

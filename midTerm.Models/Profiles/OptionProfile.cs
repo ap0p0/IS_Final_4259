@@ -13,8 +13,11 @@ namespace midTerm.Models.Profiles
             CreateMap<Option, OptionModelExtended>()
                 .ReverseMap();
 
-            CreateMap<OptionCreateModel, Option>();
-            CreateMap<OptionUpdateModel, Option>();
+            CreateMap<OptionCreateModel, Option>()
+                .ForMember(dest => dest.Id, opt => opt.Ignore())
+                 .ForMember(dest => dest.Question, opt => opt.Ignore());
+            CreateMap<OptionUpdateModel, Option>()
+                 .ForMember(dest => dest.Question, opt => opt.Ignore());
         }
        
     }
