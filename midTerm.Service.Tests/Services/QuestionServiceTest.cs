@@ -13,13 +13,13 @@ using Xunit;
 
 namespace midTerm.Services.Tests.Service
 {
-   public class QuestionServiceShould
+   public class QuestionServiceTest
          : SqlLiteContext
     {
         private readonly IMapper _mapper;
         private readonly QuestionService _service;
 
-        public QuestionServiceShould()
+        public QuestionServiceTest()
              : base(withData: true)
         {
             if (_mapper == null)
