@@ -4,7 +4,7 @@ using midTerm.Models.Models.Option;
 
 namespace midTerm.Models.Profiles
 {
-    class OptionProfile : Profile
+   public class OptionProfile : Profile
     {
         public OptionProfile()
         {
