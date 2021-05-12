@@ -4,7 +4,7 @@ using midTerm.Models.Models.Answers;
 
 namespace midTerm.Models.Profiles
 {
-    class AnswersProfile : Profile
+    public class AnswersProfile : Profile
     {
         public AnswersProfile()
         {
